@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>js task9</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.container-fluid {
+		background: #f2000D;
+		width:500px;
+		height: 320px;
+		margin-top: 80px;
+		border:2px solid black;
+		overflow: hidden;
+
+
+	}
+	#STRG {
+		border:2px solid black;
+		width: 300px;
+		height: 35px;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 16px;
+		font-family: poppins,sans-serif;
+
+
+	}
+	.btn {
+		width:100px;
+		height: 40px;
+	}
+	img {
+		position:relative;
+		margin-left: 0px;
+	}
+
+ #demo {
+ 	position:absolute;
+ 	font-size:25px ;
+ 	z-index: 1;
+ 	margin-left: 5px;
+ 	margin-top: 30px;
+ 	color:white;
+ 	text-transform: lowercase;
+
+
+ }
+ #h2 {
+ 	border:2px solid black;border-bottom-left-radius: 10px;
+ 	    border-top-right-radius: 10px;
+ 	    border-left-width: 40px;
+ 	    border-right-width: 40px;
+ 	    background: green;
+ 	    color:white;
+
+ }
+
+
+
+</style>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+				<h2 id="h2">STRING</h2>
+				<br>
+				<br>
+			<b>Input :</b>	<input type="text"  id="STRG"name="string">
+			<br>
+			<br>
+			<button type="button"  onclick="myFunction()" class="btn btn-primary">SUBMIT</button>
+			<br>
+			<br>
+			<div class="img">
+			<p id="demo"></p>
+			<img src="img/book1.jpg" width="460px" height="80px">
+		</div>
+
+		</div>
+	</div>
+</div>
+
+<script>
+	function myFunction() {
+       
+      var Input=document.getElementById('STRG').value;
+      var text=Input.split(" ");
+
+      console.log(text);
+      text.sort();
+
+
+      text.sort(function(a,b){return b.length - a.length });
+     
+    
+document.getElementById("demo").innerHTML = text.join(" ");
+
+
+
+	}
+</script>
+</body>
+</html>
